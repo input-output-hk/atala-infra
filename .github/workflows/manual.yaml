@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-      echo "Database is $DATABASE"
-      echo "VPC is $VPC"
+      echo "Database is ${DATABASE}"
+      echo "VPC is ${VPC}"
     env:
       DATABASE: ${{ github.event.inputs.database }}
       VPC: ${{ github.event.inputs.vpc }}
