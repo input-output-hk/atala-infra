@@ -1,0 +1,19 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      database:
+        description: 'Choose DB'     
+        required: true
+        default: 'warning'
+      vpc:
+        description: 'Choose VPC' 
+        required: true
+        default: 'ppp'
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Database: ${{ github.event.inputs.logLevel }}"
+        echo "VPC: ${{ github.event.inputs.tags }}"
